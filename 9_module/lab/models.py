@@ -28,7 +28,7 @@ def linear_regression(formula, data=None):
     y_hat = model.predict(X)
     result["residuals"] = y - y_hat
 
-    sum_squared_error = sum([e ** 2 for e in result["residuals"]])[0]
+    sum_squared_error = sum(e ** 2 for e in result["residuals"])[0]
 
     n = len(result["residuals"])
     k = len(result["coefficients"])
